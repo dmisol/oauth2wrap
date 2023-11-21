@@ -14,15 +14,17 @@ func TestJson(t *testing.T) {
 
 	ep := EndpointM(endpoints.GitHub)
 	c := &Conf{
-		Endpoint: &ep,
-		Api:      "https://api.github.com/user",
+		Endpoint:  ep,
+		Api:       "https://api.github.com/user",
+		WantedTag: "login",
 	}
 	m["github"] = c
 
 	ep = EndpointM(endpoints.Google)
 	c = &Conf{
-		Endpoint: &ep,
-		Api:      "https://www.googleapis.com/oauth2/v2/userinfo",
+		Endpoint:  ep,
+		Api:       "https://www.googleapis.com/oauth2/v2/userinfo",
+		WantedTag: "email",
 	}
 	m["google"] = c
 

@@ -14,9 +14,10 @@ type EndpointM struct {
 }
 
 type Conf struct {
-	ClientID     string     `json:"id"`
-	ClientSecret string     `json:"secret"`
-	Endpoint     *EndpointM `json:"endpoint"`
-	Scopes       []string   `json:"scopes,omitempty"`
-	Api          string     `json:"api"`
+	ClientID     string    `json:"id"`
+	ClientSecret string    `json:"secret"`
+	Endpoint     EndpointM `json:"endpoint"`
+	Scopes       []string  `json:"scopes,omitempty"`
+	Api          string    `json:"api"`
+	WantedTag    string    `json:"tag"`
 }
